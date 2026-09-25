@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: API Monorepo Modular
+  description: Especificación inicial OpenAPI para autenticación y usuarios.
+  version: 1.0.0
+paths:
+  /api/v1/auth/login:
+    post:
+      summary: Iniciar sesión
+      tags: [Auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Token emitido exitosamente
+  /api/v1/users/me:
+    get:
+      summary: Obtener usuario autenticado
+      tags: [Users]
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Datos del usuario actual
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

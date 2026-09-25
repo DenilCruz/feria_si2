@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Maven wrapper placeholder. Use system mvn or configure wrapper binaries."
+exec mvn "$@"
