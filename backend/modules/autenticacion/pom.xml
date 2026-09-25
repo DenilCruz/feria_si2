@@ -7,11 +7,12 @@
         <groupId>com.empresa</groupId>
         <artifactId>backend-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>auth-module</artifactId>
+    <artifactId>autenticacion</artifactId>
     <packaging>jar</packaging>
-    <name>Auth Module</name>
+    <name>Modulo Autenticacion</name>
 
     <dependencies>
         <dependency>

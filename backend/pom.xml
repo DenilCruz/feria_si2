@@ -28,8 +28,8 @@
 
     <modules>
         <module>shared</module>
-        <module>auth-module</module>
-        <module>user-module</module>
+        <module>modules/autenticacion</module>
+        <module>modules/usuarios</module>
         <module>bootstrap</module>
     </modules>
 
@@ -42,12 +42,12 @@
             </dependency>
             <dependency>
                 <groupId>com.empresa</groupId>
-                <artifactId>auth-module</artifactId>
+                <artifactId>autenticacion</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.empresa</groupId>
-                <artifactId>user-module</artifactId>
+                <artifactId>usuarios</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
